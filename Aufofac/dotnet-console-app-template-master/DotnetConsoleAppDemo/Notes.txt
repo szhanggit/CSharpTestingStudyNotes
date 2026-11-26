@@ -1,0 +1,2 @@
+﻿https://dev.to/superwalnut/create-a-dotnet-core-cosnole-app-template-with-autofac-dependency-injections-5g0i
+https://github.com/superwalnut/dotnet-console-app-template
