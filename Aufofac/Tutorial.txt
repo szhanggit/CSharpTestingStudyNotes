@@ -1,0 +1,7 @@
+https://docs.autofac.org/en/latest/faq/select-by-context.html
+https://autofac.readthedocs.io/en/latest/integration/netcore.html
+https://autofac.readthedocs.io/en/latest/examples/index.html
+
+    Attribute Injection
+    Batch Injection
+    AOP function of dynamic proxy
