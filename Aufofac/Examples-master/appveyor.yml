@@ -1,0 +1,13 @@
+image:
+- Visual Studio 2019
+- Ubuntu
+- macOS
+
+environment:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  NUGET_XMLDOC_MODE: skip
+
+clone_depth: 1
+
+build_script:
+- ps: .\build.ps1

@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <RootNamespace>MultitenantExample.MvcApplication</RootNamespace>
+    <AssemblyName>MultitenantExample.MvcApplication</AssemblyName>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectCapability Include="DotNetCoreWeb" />
+    <ProjectCapability Include="SupportsSystemWeb" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.0.0" />
+    <PackageReference Include="Autofac.Multitenant" Version="6.0.0" />
+    <PackageReference Include="Autofac.Multitenant.Wcf" Version="6.0.0" />
+    <PackageReference Include="Autofac.Mvc5" Version="6.0.0" />
+    <PackageReference Include="Autofac.Wcf" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.7" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="5.0.0" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\**" />
+    <Content Include="Content\**" />
+    <Content Include="**\*.aspx" Exclude="obj/**;bin/**" />
+    <Content Include="**\*.cshtml" Exclude="obj/**;bin/**" />
+    <Content Include="**\Web.config" Exclude="obj/**;bin/**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WcfMetadataConsumer\IMetadataConsumerProxy_1.wsdl" />
+    <None Include="Service References\WcfMetadataConsumer\MetadataConsumer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfMetadataConsumer\MetadataConsumer1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfService\BaseImplementation.wsdl" />
+    <None Include="Service References\WcfService\MultitenantService.disco" />
+    <None Include="Service References\WcfService\configuration91.svcinfo" />
+    <None Include="Service References\WcfService\configuration.svcinfo" />
+    <None Include="Service References\WcfService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WcfMetadataConsumer\MetadataConsumer.disco" />
+    <None Include="Service References\WcfMetadataConsumer\configuration91.svcinfo" />
+    <None Include="Service References\WcfMetadataConsumer\configuration.svcinfo" />
+    <None Include="Service References\WcfMetadataConsumer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WcfService\MultitenantService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfService\MultitenantService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WcfMetadataConsumer\" />
+    <WCFMetadataStorage Include="Service References\WcfService\" />
+  </ItemGroup>
+</Project>
