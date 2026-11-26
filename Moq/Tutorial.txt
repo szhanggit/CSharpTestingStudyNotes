@@ -1,0 +1,2 @@
+https://docs.educationsmediagroup.com/unit-testing-csharp/moq/delegates
+https://dogschasingsquirrels.com/2018/05/21/mocking-delegates-with-moq/
